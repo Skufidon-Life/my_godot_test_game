@@ -1,0 +1,10 @@
+NavigationAgent3D
+CollisionShape3D
+MeshInstance3D
+CharacterBody3D
+NavigationRegion3D
+CSGBox3D
+Control
+CenterContainer
+Node3D
+Camera3D

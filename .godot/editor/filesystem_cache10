@@ -1,0 +1,12 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1754408803
+icon.svg::CompressedTexture2D/CompressedTexture2D::1428377060034543722::1754208767::1754208775::1::::<><><>0<>0<>70683133680b6c2feab7a986c06abde6<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://Scenes/::1754336801
+enemy.tscn::PackedScene::1444771823611399167::1754336801::0::1::::<><><>0<>0<><>::uid://dw00qjpo0wtx1::::res://Scripts/enemy.gd
+level.tscn::PackedScene::3130148450577002329::1754336531::0::1::::<><><>0<>0<><>::uid://dnw0q61hnubg7::::res://Scenes/player.tscn<>uid://cmlr7grd5okpy::::res://Scripts/cross.gd<>uid://ut4gfcf2ixel::::res://Scenes/enemy.tscn
+player.tscn::PackedScene::8118681495209656256::1754336531::0::1::::<><><>0<>0<><>::uid://ctp40sb6uerb::::res://Scripts/player.gd<>uid://b77ciorgyh6ds::::res://Scripts/camera_3d.gd
+::res://Scripts/::1754336531
+camera_3d.gd::GDScript::4698660250470395052::1754328523::0::1::::<>Camera3D<><>0<>0<><>::
+cross.gd::GDScript::5638905322197969454::1754330226::0::1::::<>Control<><>0<>0<><>::
+enemy.gd::GDScript::8756573049041759284::1754336531::0::1::::<>CharacterBody3D<><>0<>0<><>::
+player.gd::GDScript::180564748495825667::1754332897::0::1::::<>CharacterBody3D<><>0<>0<><>::
