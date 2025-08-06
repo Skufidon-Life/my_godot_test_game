@@ -1,6 +1,8 @@
+Timer
+AnimationPlayer
+MeshInstance3D
 NavigationAgent3D
 CollisionShape3D
-MeshInstance3D
 CharacterBody3D
 NavigationRegion3D
 CSGBox3D

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnw0q61hnubg7"]
+[gd_scene load_steps=6 format=3 uid="uid://dnw0q61hnubg7"]
 
 [ext_resource type="Script" uid="uid://ctp40sb6uerb" path="res://Scripts/player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://b77ciorgyh6ds" path="res://Scripts/camera_3d.gd" id="2_cvnsp"]
+[ext_resource type="PackedScene" uid="uid://c8srx0l7d3lqg" path="res://Scenes/smg.tscn" id="3_6t5aa"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_f60y1"]
 
@@ -28,3 +29,5 @@ top_level = true
 fov = 45.0
 script = ExtResource("2_cvnsp")
 smooth_streigh = 10.0
+
+[node name="Weapon" parent="camera_pivot/Camera3D" instance=ExtResource("3_6t5aa")]

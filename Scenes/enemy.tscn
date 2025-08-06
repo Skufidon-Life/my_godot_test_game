@@ -1,10 +1,51 @@
-[gd_scene load_steps=4 format=3 uid="uid://ut4gfcf2ixel"]
+[gd_scene load_steps=8 format=3 uid="uid://ut4gfcf2ixel"]
 
 [ext_resource type="Script" uid="uid://dw00qjpo0wtx1" path="res://Scripts/enemy.gd" id="1_hghv2"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_1f0kj"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_afpow"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_hghv2"]
+size = Vector3(0.495, 0.15, 0.46)
+
+[sub_resource type="Animation" id="Animation_1f0kj"]
+resource_name = "hit"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0.518993, 0.402247), Vector3(0, 0.519, 0.517), Vector3(0, 0.518993, 0.402247)]
+}
+
+[sub_resource type="Animation" id="Animation_afpow"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.518993, 0.402247)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_287tu"]
+_data = {
+&"RESET": SubResource("Animation_afpow"),
+&"hit": SubResource("Animation_1f0kj")
+}
 
 [node name="Enemy" type="CharacterBody3D"]
 script = ExtResource("1_hghv2")
@@ -17,3 +58,12 @@ shape = SubResource("CapsuleShape3D_afpow")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 debug_enabled = true
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.518993, 0.402247)
+mesh = SubResource("BoxMesh_hghv2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_287tu")
+}

@@ -1,6 +1,8 @@
-res://Scenes/level.tscn
-res://Scripts/enemy.gd
-res://Scenes/player.tscn
 res://Scenes/enemy.tscn
 res://Scripts/camera_3d.gd
-res://Scripts/player.gd
+res://Scripts/enemy.gd
+res://Scenes/level.tscn
+res://Scenes/player.tscn
+res://weapon.gd
+res://Scenes/weapon.tscn
+res://Scenes/smg.tscn
