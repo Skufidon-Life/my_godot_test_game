@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6o8w3bs32jdg"
-path.s3tc="res://.godot/imported/SMG_Palette-Colour.png-9df0fae7482afd68af4de057b7073e8f.s3tc.ctex"
+uid="uid://bn55buaemvop8"
+path.s3tc="res://.godot/imported/SMG_Palette-Colour.png-b0395e3d8f1294af5e70b2e657a7d061.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -14,8 +14,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://Scenes/SMG_Palette-Colour.png"
-dest_files=["res://.godot/imported/SMG_Palette-Colour.png-9df0fae7482afd68af4de057b7073e8f.s3tc.ctex"]
+source_file="res://assets/SMG_Palette-Colour.png"
+dest_files=["res://.godot/imported/SMG_Palette-Colour.png-b0395e3d8f1294af5e70b2e657a7d061.s3tc.ctex"]
 
 [params]
 

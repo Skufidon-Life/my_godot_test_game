@@ -1,14 +1,24 @@
 extends CharacterBody3D
-
+class_name Enemy
 
 const SPEED = 2.0
 const JUMP_VELOCITY = 4.5
 @onready var navigation_agent_3d: NavigationAgent3D = $NavigationAgent3D
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@export var max_health:= 100
+
 var player
+var damage: = 20
 var is_provoked: bool = false
 var attack_range := 1.5
 var agro_range:= 15.0
-
+		
+var health: int = max_health:
+	set(value):
+		health = value
+		if health <= 0:
+			queue_free()
+		is_provoked = true
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
@@ -30,7 +40,7 @@ func _physics_process(delta: float) -> void:
 		
 	if is_provoked:
 		if distance <= attack_range:
-			attack()
+			animation_player.play("hit")
 			
 		if direction:
 			look_at_target(direction)
@@ -49,4 +59,5 @@ func look_at_target(direction):
 	look_at(adjusted_direction + global_position, Vector3.UP, true)
 	
 func attack():
-	print(1)
+	player.health -= damage
+	print("attack")

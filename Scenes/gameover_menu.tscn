@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://p704glcn606d"]
+
+[ext_resource type="Script" uid="uid://bqlr21tyn48g" path="res://Scripts/gameover_menu.gd" id="1_360b7"]
+[ext_resource type="Shader" uid="uid://cqdtawdgfj3g5" path="res://assets/blur.tres" id="2_qw18a"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jmoai"]
+shader = ExtResource("2_qw18a")
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bi5jf"]
+
+[node name="GameoverMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_360b7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_jmoai")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_bi5jf")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 61
+text = "GAME OVER"
+
+[node name="restart_button" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "RESTART LEVEL"
+
+[node name="quite" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "QUITE
+"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/restart_button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/quite" to="." method="_on_quite_pressed"]

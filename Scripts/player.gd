@@ -4,8 +4,22 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 var mousemotion: Vector2 = Vector2.ZERO
+@onready var animation_player: AnimationPlayer = $DamageTexture/AnimationPlayer
 @onready var camera_pivot: Node3D = $camera_pivot
+@onready var gameover_menu: Control = $GameoverMenu
+
 var jump_height:= 1.0
+var max_health: = 20
+var health: int = max_health:	
+	set(value):
+		if health > value:
+			animation_player.stop(false)
+			animation_player.play("damage")
+		health = value
+		if health <= 0:
+			gameover_menu.game_over()
+	
+	
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxd6vfaucj32t"]
+[gd_scene load_steps=3 format=3 uid="uid://cxd6vfaucj32t"]
 
 [ext_resource type="Script" uid="uid://dyddlyydyqahx" path="res://weapon.gd" id="1_er6cq"]
+[ext_resource type="PackedScene" uid="uid://dm6xew2akewpu" path="res://Scenes/hit_sparks.tscn" id="2_qv81b"]
 
 [node name="Weapon" type="Node3D"]
 script = ExtResource("1_er6cq")
+hit_spark = ExtResource("2_qv81b")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, -100)
